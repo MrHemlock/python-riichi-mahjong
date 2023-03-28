@@ -1,0 +1,12 @@
+[tool.pdm]
+
+[project]
+name = "python-riichi-mahjong"
+version = ""
+description = "An attempt at writing out the logic for a Riichi Mahjong game."
+authors = [
+    {name = "Daniel J Brown", email = "browndj3@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.10"
+license = {text = "MIT"}
