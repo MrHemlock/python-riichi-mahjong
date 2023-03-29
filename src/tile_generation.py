@@ -4,11 +4,11 @@ from itertools import count
 
 
 class TileTypes(Flag):
-    DRAGON = auto()
-    WIND = auto()
     DOTS = auto()
     STICKS = auto()
     CRACKS = auto()
+    DRAGON = auto()
+    WIND = auto()
     HONORS = DRAGON | WIND
 
 
@@ -31,6 +31,10 @@ class Tile:
     value: int | DragonValues | WindValues
     _id: int = field(default_factory=count().__next__)
     red: bool = False
+
+    def __lt__(self, other):
+        return self._id < other._id
+
 
 
 def initialize_tiles():
