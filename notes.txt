@@ -12,3 +12,9 @@ def triplewise(iterable):
 
 Look into: https://github.com/MahjongRepository/mahjong/blob/master/mahjong/hand_calculating/divider.py
 
+^ from above repo, look into the test cases
+Also, any mention of 34 means the melds of 3 or 4 tiles.
+
+
+https://github.com/livewing/mahjong-calc
+
