@@ -18,3 +18,5 @@ Also, any mention of 34 means the melds of 3 or 4 tiles.
 
 https://github.com/livewing/mahjong-calc
 
+https://github.com/erreurt/MahjongKit
+
