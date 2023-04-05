@@ -20,3 +20,6 @@ https://github.com/livewing/mahjong-calc
 
 https://github.com/erreurt/MahjongKit
 
+https://github.com/bonarc712/commonjong/blob/master/src/main/java/com/monsieurmahjong/commonjong/rules/generic/waits/parsing/TileParser.java
+
+See if that has the kind of logic we're needing.
