@@ -37,9 +37,9 @@ class WindValues(Enum):
 
 @dataclass(slots=True)
 class Tile:
+    _id: int
     suit: TileTypes
     value: int | DragonValues | WindValues
-    _id: int = field(default_factory=count().__next__)
     red: bool = False
 
     def __lt__(self, other: Tile):
@@ -55,17 +55,18 @@ class Tile:
 
 
 def initialize_tiles():
+    ids = count()
     all_tiles = []
-    for tile_type in (TileTypes.DRAGON, TileTypes.WIND):
+    for tile_type in TileTypes:
         if tile_type == TileTypes.DRAGON:
             for color in DragonValues:
-                all_tiles.extend([Tile(tile_type, color) for _ in range(4)])
+                all_tiles.extend([Tile(next(ids), tile_type, color) for _ in range(4)])
         elif tile_type == TileTypes.WIND:
             for direction in WindValues:
-                all_tiles.extend([Tile(tile_type, direction) for _ in range(4)])
+                all_tiles.extend([Tile(next(ids), tile_type, direction) for _ in range(4)])
         else:
             for i in range(1, 10):
-                all_tiles.extend([Tile(tile_type, i) for _ in range(4)])
+                all_tiles.extend([Tile(next(ids), tile_type, i) for _ in range(4)])
     return all_tiles
 
 
